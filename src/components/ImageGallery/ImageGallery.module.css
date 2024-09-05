@@ -1,0 +1,10 @@
+.imageGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 20px;
+    min-width: 364px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}

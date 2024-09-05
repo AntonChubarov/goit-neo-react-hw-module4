@@ -1,0 +1,19 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1d1b30;
+  min-height: 100vh;
+  color: #e0e0e0;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.mainContent {
+  width: 100vw;
+  margin-top: 80px;
+}
+
+.loadMoreButton {
+  margin: 20px 0;
+}

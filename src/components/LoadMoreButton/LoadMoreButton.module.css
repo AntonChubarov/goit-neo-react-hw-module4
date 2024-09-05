@@ -1,0 +1,26 @@
+.loadMoreButtonWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.loadMoreButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #5d4e8e;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.loadMoreButton:hover {
+    background-color: #6e5ca7;
+    transform: translateY(-2px);
+}
+
+.loadMoreButton:active {
+    background-color: #5d4e8e;
+    transform: translateY(0);
+}
