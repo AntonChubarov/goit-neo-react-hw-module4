@@ -25,6 +25,7 @@ export const searchPhotos = async (query, page = 1, perPage = 3) => {
             total_pages: data.total_pages,
             results: data.results.map(photo => ({
                 id: photo.id,
+                description: photo.alt_description,
                 urls: {
                     regular: photo.urls.regular,
                     small: photo.urls.small,

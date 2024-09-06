@@ -3,11 +3,13 @@ import styles from './ImageGallery.module.css';
 
 function ImageGallery({ photos, onImageClick }) {
     return (
-        <div className={styles.imageGallery}>
+        <ul className={styles.imageGallery}>
             {photos.map((photo) => (
-                <ImageCard key={photo.id} photo={photo} onClick={() => onImageClick(photo)} />
+                <li key={photo.id}>
+                    <ImageCard key={photo.id} photo={photo} onClick={() => onImageClick(photo)}/>
+                </li>
             ))}
-        </div>
+        </ul>
     );
 }
 

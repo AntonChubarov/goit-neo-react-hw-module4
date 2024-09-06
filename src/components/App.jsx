@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Toaster } from 'react-hot-toast';
 import styles from './App.module.css';
 
 import SearchBar from './SearchBar/SearchBar.jsx';
@@ -56,6 +57,7 @@ function App() {
 
     return (
         <div className={styles.app}>
+            <Toaster position="top-right" />
             <SearchBar onSearch={handleSearch} />
             <div className={styles.mainContent}>
                 {error && <ErrorMessage message={error} />}

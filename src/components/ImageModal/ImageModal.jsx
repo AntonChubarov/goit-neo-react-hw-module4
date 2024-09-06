@@ -1,16 +1,22 @@
 import { FaTimes } from 'react-icons/fa';
+import Modal from 'react-modal';
 import styles from './ImageModal.module.css';
+
+Modal.setAppElement('#root');
 
 function ImageModal({ photo, onClose }) {
     return (
-        <div className={styles.modal} onClick={onClose}>
-            <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-                <img src={photo.urls.regular} alt="" />
-                <button className={styles.closeButton} onClick={onClose}>
-                    <FaTimes size={24} />
-                </button>
-            </div>
-        </div>
+        <Modal
+            isOpen={!!photo}
+            onRequestClose={onClose}
+            className={styles.modalContent}
+            overlayClassName={styles.modalOverlay}
+        >
+            <img src={photo.urls.regular} alt={photo.description} className={styles.modalImage} />
+            <button className={styles.closeButton} onClick={onClose}>
+                <FaTimes size={24} />
+            </button>
+        </Modal>
     );
 }
 
